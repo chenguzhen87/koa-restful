@@ -1,0 +1,185 @@
+/*
+  create by Egret in 2018/5/7
+  reset           样式重置
+  layout          布局
+  public          公用样式
+  reset-uiBank    第三方ui库,插件样式修改
+*/
+
+/* ----------------------- reset ----------------------- */
+
+* {
+  padding: 0;
+  margin: 0
+}
+
+body, html, #app {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei" !important;
+  /*font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-size: 12px;
+  min-width: 1000px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体"
+}
+
+a {
+  color: #666;
+  text-decoration: none
+}
+/***search-bar***/
+.search-bar {
+  padding: 10px;
+  float: left;
+}
+.search-bar .el-form-item{
+  margin-bottom: 0px;
+}
+.search-bar .el-form-item .el-input {
+  width: 150px;
+}
+.search-bar .el-form .el-button{
+  margin-left: 15px;
+  margin-top: 4px;
+}
+/***table***/
+.table {
+  flex: 8;
+  width: 100%;
+  height: auto;
+  min-width: 390px;
+  position: relative;
+  float: left;
+}
+
+.table .table-toolbar {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid #ebeef5;
+  border-left: 1px solid #ebeef5;
+  border-right: 1px solid #ebeef5;
+}
+.table .table-toolbar .table-toolbar-title{
+  float: left;
+  color: #333;
+  margin-top: 4px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ebeef5;
+}
+.table .table-toolbar ul{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.table .table-toolbar ul li{
+  width: auto;
+  float: left;
+  margin-top: 4px;
+  height: 32px;
+  line-height: 32px;
+  color: #606266;
+  font-size: 12px;
+  border-right: 1px solid #ebeef5;
+  padding: 0 10px;
+}
+.table .table-toolbar ul li:hover{
+  cursor: pointer;
+  background-color: #ebeef5;
+}
+.table .table-toolbar ul li i{
+  padding: 0 2px;
+}
+
+.el-table tr td, .el-table tr th{
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.table .el-pagination {
+  padding: 8px 20px;
+  width: 100%;
+  margin: 0;
+  float: right;
+  text-align: right;
+}
+
+.table .el-pagination .el-select .el-input {
+  width: 85px;
+  padding: 0;
+}
+
+.table .el-pagination .el-select .el-input .el-input__inner {
+  height: 22px;
+  line-height: 22px;
+}
+
+/* ----------------------- public ---------------------- */
+
+/* 引入阿里矢量图 https: */
+@font-face {
+  font-family: 'atsFont';  /* project id 656395 */
+  src: url('//at.alicdn.com/t/font_656395_85tlynxoqr3mzpvi.eot');
+  src: url('//at.alicdn.com/t/font_656395_85tlynxoqr3mzpvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_656395_85tlynxoqr3mzpvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_656395_85tlynxoqr3mzpvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_656395_85tlynxoqr3mzpvi.svg#atsFont') format('svg');
+}
+
+/* 配合阿里矢量图使用 */
+.atsFont {
+  font-family: "atsFont";
+  font-size: 16px;
+  font-style: normal;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix { /*兼容 IE*/
+  zoom: 1;
+}
+
+.set-left {
+  float: left
+}
+
+.set-right {
+  float: right
+}
+
+.vue-contextmenu-listWrapper .context-menu-list button i{
+  margin-top: 3px;
+}
+
+
+

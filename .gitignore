@@ -1,0 +1,7 @@
+#############
+## Python
+#############
+.idea
+*.pyc
+__pycache__
+migrations
