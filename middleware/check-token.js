@@ -22,7 +22,7 @@ module.exports = function (){
           };
           ctx.response.status = 401;
         }else{
-          ctx.state.username = decoded.username;
+          ctx.state.user_name = decoded.user_name;
         }
       }
     }
