@@ -5,7 +5,7 @@ const Router = require('koa-router');
 const router = new Router();
 const db = require('../../db/index');
 const {User} = require('../../models/sysmgr');
-const createToken = require('../../utils/createToken');
+const {createToken,clearToken} = require('../../utils/token');
 const sha1 = require('sha1'); //加密
 
 router
@@ -27,6 +27,18 @@ router
                 ctx.response.status = 400;
                 ctx.response.body = {msg: '用户名或密码错误'};
             }
+        }).catch(err => {
+            // 查找数据库发生错误，或者一些
+            console.log(err);
+            ctx.response.status = 400;
+            ctx.response.body = {msg: '登录失败，请于管理员联系或稍后重试'};
+        });
+    })
+    .post('/logout',async(ctx)=> {
+        let user_name = ctx.state.user_name;
+        await clearToken(user_name).then(data => {
+            ctx.response.status = 200;
+            ctx.response.body = {msg: '操作成功'};
         }).catch(err => {
             // 查找数据库发生错误，或者一些
             console.log(err);
